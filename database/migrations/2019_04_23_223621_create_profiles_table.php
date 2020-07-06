@@ -22,7 +22,7 @@ class CreateProfilesTable extends Migration
             $table->string('image')->nullable();
             $table->timestamps();
 
-            $table->index('user_id');
+            $table->foreign('user_id')->reference('id')->on('users');
         });
     }
 
